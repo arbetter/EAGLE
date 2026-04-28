@@ -3,6 +3,7 @@ name: Nested EAGLE CI Pipeline (uwtools)
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
+  workflow_dispatch:
 
 concurrency:
   group: nested-eagle-ci-${{ github.event.pull_request.number }}
